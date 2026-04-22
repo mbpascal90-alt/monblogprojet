@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{%   block title %}
+     accueil
+{%  endblock title %}
+{%   block content %}
+<h1>    Page d'accueille   </h1>
+<p>    C'est la page d'accueil bientot vous verrez des articles ici.  </p>
+{%   if user.is_authenticated %}
+<p>Vous etes connectes en tant que {{user.username}}</p>
+{%   else  %}
+<p> Veillez vous connecter </p>
+{%   endif  %}
+<h3>    Bien venu sur mon super Blog!  </h3>
+{%  endblock content %}
